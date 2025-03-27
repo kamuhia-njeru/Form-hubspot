@@ -148,10 +148,6 @@
         color: #555;
         text-align: left;
     }
-label {
-    display: block;
-    margin-bottom: 4px; /* Adjust this value as needed */
-}
 
     /* Ensure the form fields are properly spaced and aligned */
     form {
@@ -182,8 +178,11 @@ label {
 <body>
   <div class="form-container">
     <form id="custom_form">
-      <label for="firstname"><strong><span>*</span> First name</strong></label>
-      <input type="text" id="firstname" name="firstname" required>
+      <label for="firstname" style="display: block; margin-bottom: 4px;">
+  <strong><span>*</span> First name</strong>
+</label>
+<input type="text" id="firstname" name="firstname" required>
+
 
       <label for="lastname"><strong><span>*</span> Last name</strong></label>
       <input type="text" id="lastname" name="lastname" required>
