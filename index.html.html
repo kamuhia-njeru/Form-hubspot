@@ -24,19 +24,23 @@
       margin-bottom: 10px;
     }
     .form-container input {
-      width: 100%;
-      padding: 18px;
-      margin: 12px 0;
-      border: 5px solid black; /* Black border */
-      font-size: 16px;
-      font-weight: bold;
-      color: #888;
-      box-sizing: border-box;
-      border-radius: 0;
-    }
-    .form-container input::placeholder {
-      color: #999;
-    }
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 10px;
+  border: 2px solid black; /* Black border */
+  border-radius: 5px; /* Optional: Rounds the edges */
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #FFF;
+  text-align: left;
+  text-transform: none;
+  outline: none; /* Removes the default focus outline */
+}
+
+.form-container input:focus {
+  border-color: black; /* Keep border black when focused */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: Adds a slight glow effect */
+}
     .form-container button {
       width: 33%;
       padding: 10px;
