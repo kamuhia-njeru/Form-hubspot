@@ -25,7 +25,7 @@
     }
     .form-container input {
       width: 100%;
-      padding: 5px;
+      padding: 18px;
       margin: 12px 0;
       border: none;
       font-size: 16px;
@@ -205,6 +205,28 @@ input[type="email"] {
     max-width: 500px; /* Keep it concise */
     line-height: 1.4;
     margin-bottom: 6px; /* Reduce space below description */
+}
+label {
+    display: block;
+    margin-bottom: 2px !important; /* Reduces space below labels */
+}
+
+input {
+    margin-bottom: 5px !important; /* Reduces space below inputs */
+    padding: 4px !important; /* Adjusts input padding for a compact look */
+    width: 100% !important; /* Ensures inputs are neatly aligned */
+}
+
+.description {
+    margin-top: -5px !important; /* Pulls description closer to the previous label */
+    margin-bottom: 2px !important; /* Reduces space below description */
+    font-size: 0.8em !important;
+}
+
+form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important; /* Controls overall spacing between elements */
 }
 
     /* Ensure the form fields are properly spaced and aligned */
