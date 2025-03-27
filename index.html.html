@@ -253,12 +253,12 @@ button:hover {
     });
   }
 
-  // Function to enforce capitalization
-  function enforceCapitalization(input) {
-    input.value = input.value
-      .toLowerCase()
-      .replace(/\b\w/g, char => char.toUpperCase());
-  }
+  // function enforceCapitalization(input) {
+  input.value = input.value
+    .replace(/\b[a-z]/g, function(char) {
+      return char.toUpperCase();
+    });
+}
 
   // Auto-capitalize input fields
   function applyCapitalization(selector) {
