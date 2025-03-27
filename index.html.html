@@ -289,7 +289,8 @@ button:hover {
           setTimeout(function() {
             popup.style.display = "none";
           }, 3000); // Hide after 3 seconds
-document.addEventListener("DOMContentLoaded", function() {
+	<script>
+  document.addEventListener("DOMContentLoaded", function() {
     function capitalizeFirstLetter(input) {
       input.addEventListener("input", function() {
         let value = input.value;
@@ -302,7 +303,9 @@ document.addEventListener("DOMContentLoaded", function() {
     capitalizeFirstLetter(document.getElementById("firstname"));
     capitalizeFirstLetter(document.getElementById("lastname"));
     capitalizeFirstLetter(document.getElementById("nearest_city"));
-  });	
+  });
+</script>
+
           document.getElementById("custom_form").reset();
         })
         .catch(error => {
