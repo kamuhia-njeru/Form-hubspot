@@ -249,10 +249,11 @@
         });
       }
 
-      // function to auto-capitalize input fields
-      function enforceCapitalization(input) {
+            // Function to capitalize first letter of each word
+      function capitalizeWords(input) {
         input.value = input.value
-          .replace(/\b[a-z]/g, function(char) {
+          .toLowerCase()
+          .replace(/\b\w/g, function(char) {
             return char.toUpperCase();
           });
       }
@@ -262,16 +263,15 @@
         let inputs = document.querySelectorAll(selector);
         inputs.forEach(input => {
           input.addEventListener("input", function() {
-            enforceCapitalization(this);
+            capitalizeWords(this);
           });
 
           input.addEventListener("blur", function() {
-            enforceCapitalization(this);
+            capitalizeWords(this);
           });
 
-          // If pasting text, apply immediately
           input.addEventListener("paste", function(event) {
-            setTimeout(() => enforceCapitalization(this), 50);
+            setTimeout(() => capitalizeWords(this), 50);
           });
         });
       }
