@@ -82,7 +82,7 @@
     .pac-item {
       color: black !important;
     }
-        .popup {
+    .popup {
       position: relative; 
       top: 0; 
       margin-top: 2px; /* Space between button and popup */
@@ -104,233 +104,222 @@
     .popup.success {
       background-color: black;
     }
-	/* Ensure labels are bold and left-aligned */
-label {
-    font-weight: bold;
-    display: block; /* Ensures labels are on their own line */
-    text-align: left; /* Aligns text to the left */
-}
+    /* Ensure labels are bold and left-aligned */
+    label {
+        font-weight: bold;
+        display: block; /* Ensures labels are on their own line */
+        text-align: left; /* Aligns text to the left */
+    }
 
-/* Style the description text */
-.description {
-    font-size: 0.9em; /* Slightly smaller font */
-    line-height: 1.5; /* Improve readability */
-    margin-top: 5px; /* Space between label and description */
-    margin-bottom: 10px; /* Space between description and input field */
-    color: #555; /* Slightly lighter text for better readability */
-    text-align: left; /* Ensures left alignment */
-}
+    /* Style the description text */
+    .description {
+        font-size: 0.9em; /* Slightly smaller font */
+        line-height: 1.5; /* Improve readability */
+        margin-top: 5px; /* Space between label and description */
+        margin-bottom: 10px; /* Space between description and input field */
+        color: #555; /* Slightly lighter text for better readability */
+        text-align: left; /* Ensures left alignment */
+    }
 
-/* Ensure the form fields are properly spaced and aligned */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Add spacing between form elements */
-}
+    /* Ensure the form fields are properly spaced and aligned */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Add spacing between form elements */
+    }
 
-/* Optional: Add some padding to the form container */
-.form-container {
-    max-width: 500px;
-    margin: 0 auto; /* Center the form */
-    padding: 20px;
-}
+    /* Optional: Add some padding to the form container */
+    .form-container {
+        max-width: 500px;
+        margin: 0 auto; /* Center the form */
+        padding: 20px;
+    }
 
-/* Ensure labels are bold and left-aligned */
-label {
-    font-weight: bold;
-    display: block;
-    text-align: left;
-}
+    /* Ensure labels are bold and left-aligned */
+    label {
+        font-weight: bold;
+        display: block;
+        text-align: left;
+    }
 
-/* Style the description text */
-.description {
-    font-size: 0.9em;
-    line-height: 1.5;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    color: #555;
-    text-align: left;
-}
+    /* Style the description text */
+    .description {
+        font-size: 0.9em;
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        color: #555;
+        text-align: left;
+    }
 
-/* Ensure the form fields are properly spaced and aligned */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+    /* Ensure the form fields are properly spaced and aligned */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-/* Center the button */
-button {
-    align-self: center; /* Center the button horizontally */
-    padding: 10px 20px; /* Add padding to the button */
-    background-color: #007bff; /* Blue background color */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Slightly rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1em; /* Increase font size for readability */
-    margin-top: 20px; /* Space between the form elements and button */
-}
+    /* Center the button */
+    button {
+        align-self: center; /* Center the button horizontally */
+        padding: 10px 20px; /* Add padding to the button */
+        background-color: #007bff; /* Blue background color */
+        color: white; /* White text */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Slightly rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 1em; /* Increase font size for readability */
+        margin-top: 20px; /* Space between the form elements and button */
+    }
 
-/* Optional: Add hover effect for the button */
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
+    /* Optional: Add hover effect for the button */
+    button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
   </style>
 </head>
 <body>
   <div class="form-container">
     <form id="custom_form">
- <label for="firstname"><strong><span>*</span> First name</strong></label>
-<input type="text" id="firstname" name="firstname" required style="text-transform: lowercase;">
+      <label for="firstname"><strong><span>*</span> First name</strong></label>
+      <input type="text" id="firstname" name="firstname" required style="text-transform: lowercase;">
 
-<label for="lastname"><strong><span>*</span> Last name</strong></label>
-<input type="text" id="lastname" name="lastname" required style="text-transform: lowercase;">
+      <label for="lastname"><strong><span>*</span> Last name</strong></label>
+      <input type="text" id="lastname" name="lastname" required style="text-transform: lowercase;">
 
-<label for="email"><strong><span>*</span> Your email address</strong></label>
-<input type="email" id="email" name="email" required style="text-transform: lowercase;">
+      <label for="email"><strong><span>*</span> Your email address</strong></label>
+      <input type="email" id="email" name="email" required style="text-transform: lowercase;">
 
-<label for="nearest_city"><strong>Nearest city</strong></label>
-<p class="description" style="font-size: 0.9em;">
-    We would like to share content and exclusive events relevant to your location. Please enter your nearest city below
-</p>
-<input type="text" id="nearest_city" name="nearest_city" required autocomplete="off" style="text-transform: lowercase;">
+      <label for="nearest_city"><strong>Nearest city</strong></label>
+      <p class="description" style="font-size: 0.9em;">
+          We would like to share content and exclusive events relevant to your location. Please enter your nearest city below
+      </p>
+      <input type="text" id="nearest_city" name="nearest_city" required autocomplete="off" style="text-transform: lowercase;">
 
-<input type="hidden" id="guild_address_city" name="guild_address_city" style="text-transform: lowercase;">
-<input type="hidden" id="guild_address_state" name="guild_address_state" style="text-transform: lowercase;">
-<input type="hidden" id="guild_address_country" name="guild_address_country" style="text-transform: lowercase;">
-<input type="hidden" id="ip_address" name="ip_address" style="text-transform: lowercase;">
+      <input type="hidden" id="guild_address_city" name="guild_address_city" style="text-transform: lowercase;">
+      <input type="hidden" id="guild_address_state" name="guild_address_state" style="text-transform: lowercase;">
+      <input type="hidden" id="guild_address_country" name="guild_address_country" style="text-transform: lowercase;">
+      <input type="hidden" id="ip_address" name="ip_address" style="text-transform: lowercase;">
 
-<p class="form-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-<button type="submit">Join</button
+      <p class="form-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <button type="submit">Join</button>
     </form>
   </div>
   <div id="popup" class="popup"></div>
   
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-  fetch('https://api64.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("ip_address").value = data.ip;
-    })
-    .catch(error => {
-      console.error('Error fetching IP address:', error);
-    });
+      fetch('https://api64.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("ip_address").value = data.ip;
+        })
+        .catch(error => {
+          console.error('Error fetching IP address:', error);
+        });
 
-  var input = document.getElementById('nearest_city');
-  if (input) {
-    var autocomplete = new google.maps.places.Autocomplete(input, {
-      types: ['(cities)'],
-      componentRestrictions: { country: 'GB' }
-    });
+      var input = document.getElementById('nearest_city');
+      if (input) {
+        var autocomplete = new google.maps.places.Autocomplete(input, {
+          types: ['(cities)'],
+          componentRestrictions: { country: 'GB' }
+        });
 
-    autocomplete.addListener('place_changed', function() {
-      var place = autocomplete.getPlace();
-      if (!place.geometry) {
-        alert("Please select a valid city from the suggestions.");
-        input.value = "";
-        return;
+        autocomplete.addListener('place_changed', function() {
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            alert("Please select a valid city from the suggestions.");
+            input.value = "";
+            return;
+          }
+
+          let city = "", state = "", country = "";
+          place.address_components.forEach(component => {
+            if (component.types.includes("locality")) {
+              city = component.long_name;
+            }
+            if (component.types.includes("administrative_area_level_1")) {
+              state = component.long_name;
+            }
+            if (component.types.includes("country")) {
+              country = component.long_name;
+            }
+          });
+
+          document.getElementById("guild_address_city").value = city;
+          document.getElementById("guild_address_state").value = state;
+          document.getElementById("guild_address_country").value = country;
+        });
       }
 
-      let city = "", state = "", country = "";
-      place.address_components.forEach(component => {
-        if (component.types.includes("locality")) {
-          city = component.long_name;
-        }
-        if (component.types.includes("administrative_area_level_1")) {
-          state = component.long_name;
-        }
-        if (component.types.includes("country")) {
-          country = component.long_name;
-        }
-      });
-
-      document.getElementById("guild_address_city").value = city;
-      document.getElementById("guild_address_state").value = state;
-      document.getElementById("guild_address_country").value = country;
-    });
-  }
-
-  // function enforceCapitalization(input) {
-  input.value = input.value
-    .replace(/\b[a-z]/g, function(char) {
-      return char.toUpperCase();
-    });
-}
-
-  // Auto-capitalize input fields
-  function applyCapitalization(selector) {
-    let inputs = document.querySelectorAll(selector);
-    inputs.forEach(input => {
-      input.addEventListener("input", function() {
-        enforceCapitalization(this);
-      });
-
-      input.addEventListener("blur", function() {
-        enforceCapitalization(this);
-      });
-
-      // If pasting text, apply immediately
-      input.addEventListener("paste", function(event) {
-        setTimeout(() => enforceCapitalization(this), 50);
-      });
-    });
-  }
-
-  applyCapitalization("#firstname, #lastname, #nearest_city");
-
-  document.getElementById("custom_form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var formData = {
-      fields: [
-        { name: "firstname", value: document.getElementById("firstname").value },
-        { name: "lastname", value: document.getElementById("lastname").value },
-        { name: "email", value: document.getElementById("email").value },
-        { name: "guild_address_city", value: document.getElementById("guild_address_city").value },
-        { name: "guild_address_state", value: document.getElementById("guild_address_state").value },
-        { name: "guild_address_country", value: document.getElementById("guild_address_country").value },
-        { name: "ip_address", value: document.getElementById("ip_address").value }
-      ]
-    };
-
-    fetch("https://api.hsforms.com/submissions/v3/integration/submit/26694128/92a2367e-d779-46e3-b30c-ddbd301363b0", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      var popup = document.getElementById("popup");
-      if (data.status === 'error') {
-        console.error("HubSpot error:", data.message);
-        popup.classList.add("error");
-        popup.textContent = "Submission failed. Try again.";
-      } else {
-        popup.classList.remove("error");
-        popup.classList.add("success");
-        popup.textContent = "Form submitted successfully!";
+      // function to auto-capitalize input fields
+      function enforceCapitalization(input) {
+        input.value = input.value
+          .replace(/\b[a-z]/g, function(char) {
+            return char.toUpperCase();
+          });
       }
-      popup.style.display = "block";
-      setTimeout(function() {
-        popup.style.display = "none";
-      }, 3000); // Hide after 3 seconds
-      document.getElementById("custom_form").reset();
-    })
-    .catch(error => {
-      console.error("Error submitting form:", error);
-      var popup = document.getElementById("popup");
-      popup.classList.add("error");
-      popup.textContent = "Submission failed. Try again.";
-      popup.style.display = "block";
-      setTimeout(function() {
-        popup.style.display = "none";
-      }, 3000); // Hide after 3 seconds
+
+      // Auto-capitalize input fields
+      function applyCapitalization(selector) {
+        let inputs = document.querySelectorAll(selector);
+        inputs.forEach(input => {
+          input.addEventListener("input", function() {
+            enforceCapitalization(this);
+          });
+
+          input.addEventListener("blur", function() {
+            enforceCapitalization(this);
+          });
+
+          // If pasting text, apply immediately
+          input.addEventListener("paste", function(event) {
+            setTimeout(() => enforceCapitalization(this), 50);
+          });
+        });
+      }
+
+      applyCapitalization("#firstname, #lastname, #nearest_city");
+
+      document.getElementById("custom_form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var formData = {
+          fields: [
+            { name: "firstname", value: document.getElementById("firstname").value },
+            { name: "lastname", value: document.getElementById("lastname").value },
+            { name: "email", value: document.getElementById("email").value },
+            { name: "guild_address_city", value: document.getElementById("guild_address_city").value },
+            { name: "guild_address_state", value: document.getElementById("guild_address_state").value },
+            { name: "guild_address_country", value: document.getElementById("guild_address_country").value },
+            { name: "ip_address", value: document.getElementById("ip_address").value }
+          ]
+        };
+
+        fetch("https://api.hsforms.com/submissions/v3/integration/submit/26694128/92a2367e-d779-46e3-b30c-ddbd301363b0", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+          var popup = document.getElementById("popup");
+          if (data.status === 'error') {
+            console.error("HubSpot error:", data.message);
+            popup.classList.add("error");
+            popup.textContent = "Submission failed. Try again.";
+          } else {
+            popup.classList.remove("error");
+            popup.classList.add("success");
+            popup.textContent = "Thank you! Your submission was successful!";
+          }
+          popup.style.display = "block";
+        })
+        .catch(error => {
+          console.error('Error submitting form:', error);
+        });
+      });
     });
-  });
-});
-</script>
+  </script>
 </body>
 </html>
