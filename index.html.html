@@ -107,6 +107,29 @@
         display: block; /* Ensures labels are on their own line */
         text-align: left; /* Aligns text to the left */
     }
+label {
+    display: block;
+    margin-bottom: 1px; /* Even smaller space below labels */
+    color: #333; /* Light black */
+}
+
+span {
+    color: red; /* Ensures (*) is red */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px; /* Keeps padding inside input fields the same */
+    margin-bottom: 2px; /* Further reduced space between input fields */
+    border: 1px solid gray;
+}
+
+.description {
+    margin-top: -8px; /* Pushes description closer to label */
+    margin-bottom: 1px; /* Reduces space below description */
+    font-size: 0.85em;
+}
 
     /* Style the description text */
     .description {
