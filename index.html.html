@@ -22,24 +22,21 @@
       color: #A33323;
       font-size: 26px;
       margin-bottom: 10px;
-      
-    }.form-container input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 10px solid #ccc; /* Adjust thickness and color as needed */
-  border-radius: 0px; /* Optional: Rounds the edges */
-  font-size: 14px;
-  box-sizing: border-box;
-  background-color: #FFF;
-  text-align: left;
-  text-transform: none;
-  outline: none; /* Removes the default focus outline */
-}
-.form-container input:focus {
-  border-color: #007BFF; /* Change border color when input is focused */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Adds a glow effect */
-}
+    }
+    .form-container input {
+      width: 100%;
+      padding: 18px;
+      margin: 12px 0;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: #888;
+      box-sizing: border-box;
+      border-radius: 0;
+    }
+    .form-container input::placeholder {
+      color: #999;
+    }
     .form-container button {
       width: 33%;
       padding: 10px;
@@ -181,21 +178,20 @@
 <body>
   <div class="form-container">
     <form id="custom_form">
-      <label for="firstname"><strong><span style="color: red;">*</span> First name</strong></label>
-<input type="text" id="firstname" name="firstname" required>
+      <label for="firstname"><strong><span>*</span> First name</strong></label>
+      <input type="text" id="firstname" name="firstname" required>
 
-<label for="lastname"><strong><span style="color: red;">*</span> Last name</strong></label>
-<input type="text" id="lastname" name="lastname" required>
+      <label for="lastname"><strong><span>*</span> Last name</strong></label>
+      <input type="text" id="lastname" name="lastname" required>
 
-<label for="email"><strong><span style="color: red;">*</span> Your email address</strong></label>
-<input type="email" id="email" name="email" required>
+      <label for="email"><strong><span>*</span> Your email address</strong></label>
+      <input type="email" id="email" name="email" required>
 
-<label for="nearest_city"><strong>Nearest city</strong></label>
-<p class="description" style="font-size: 0.9em;">
-    We would like to share content and exclusive events relevant to your location. Please enter your nearest city below
-</p>
-<input type="text" id="nearest_city" name="nearest_city" required autocomplete="off">
-
+      <label for="nearest_city"><strong>Nearest city</strong></label>
+      <p class="description" style="font-size: 0.9em;">
+          We would like to share content and exclusive events relevant to your location. Please enter your nearest city below
+      </p>
+      <input type="text" id="nearest_city" name="nearest_city" required autocomplete="off">
 
       <input type="hidden" id="guild_address_city" name="guild_address_city" style="text-transform: lowercase;">
       <input type="hidden" id="guild_address_state" name="guild_address_state" style="text-transform: lowercase;">
