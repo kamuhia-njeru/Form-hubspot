@@ -24,70 +24,19 @@
       margin-bottom: 10px;
     }
     .form-container input {
-  width: 100%;
-  padding: 18px;
-  margin-bottom: 10px;
-  border: 2px solid gray; /* gray border */
-  border-radius: 0px; /* Optional: Rounds the edges */
-  font-size: 14px;
-  box-sizing: border-box;
-  background-color: #FFF;
-  text-align: left;
-  text-transform: none;
-  outline: none; /* Removes the default focus outline */
-}
-/* Reduce space between labels and input fields */
-label {
-  margin-bottom: 2px; /* Decrease spacing */
-  display: block;
-}
-
-/* Reduce space between form elements */
-.form-container form {
-  gap: 10px; /* Adjust overall spacing */
-}
-
-/* Gray border around input fields */
-.form-container input {
-  border: 2px solid gray !important;
-  padding: 28px; /* Keep padding for a clean look */
-}
-
-/* Red asterisk (*) */
-label span {
-  color: red;
-}
-/* Labels in light black (dark gray) */
-label {
-  color: #333; /* Dark gray */
-  font-weight: bold;
-  display: block;
-  margin-bottom: 2px; /* Reduce space between label and input */
-}
-
-/* Reduce space between form elements */
-.form-container form {
-  gap: 8px;
-}
-
-/* Gray border around input fields */
-.form-container input {
-  border: 2px solid gray !important;
-  padding: 12px;
-}
-
-/* Red asterisk (*) */
-label span {
-  color: red;
-}
-    .description {
-    margin-bottom: 2px; /* Adjust spacing */
-}
-
-.form-container input:focus {
-  border-color: black; /* Keep border black when focused */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: Adds a slight glow effect */
-}
+      width: 100%;
+      padding: 18px;
+      margin: 12px 0;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: #888;
+      box-sizing: border-box;
+      border-radius: 0;
+    }
+    .form-container input::placeholder {
+      color: #999;
+    }
     .form-container button {
       width: 33%;
       padding: 10px;
@@ -168,39 +117,6 @@ label span {
         color: #555; /* Slightly lighter text for better readability */
         text-align: left; /* Ensures left alignment */
     }
-label {
-    font-size: 0.95em;
-    color: #555; /* Light black */
-    margin-bottom: 3px; /* Reduce space below label */
-    display: block;
-}
-
-.description {
-    font-size: 0.8em;
-    margin-bottom: 3px; /* Reduce space below description */
-}
-
-input {
-    width: 100%;
-    height: 45px; /* Increase input size */
-    font-size: 1em;
-    padding: 10px;
-    border: 1px solid gray; /* Gray border */
-    border-radius: 4px;
-    outline: none;
-}
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 4px;
-}
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #888; /* Light gray border */
-    border-radius: 4px;
-}
 
     /* Ensure the form fields are properly spaced and aligned */
     form {
@@ -213,7 +129,7 @@ input[type="text"] {
     .form-container {
         max-width: 500px;
         margin: 0 auto; /* Center the form */
-        padding: 18px;
+        padding: 15px;
     }
 
     /* Ensure labels are bold and left-aligned */
