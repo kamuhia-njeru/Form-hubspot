@@ -253,12 +253,33 @@ button:hover {
     });
   }
 
-  // Auto-capitalize first letter of each word for firstname, lastname, and nearest_city
-  document.querySelectorAll("#firstname, #lastname, #nearest_city").forEach(input => {
-    input.addEventListener("input", function() {
-      this.value = this.value.replace(/\b\w/g, char => char.toUpperCase());
+  // Function to enforce capitalization
+  function enforceCapitalization(input) {
+    input.value = input.value
+      .toLowerCase()
+      .replace(/\b\w/g, char => char.toUpperCase());
+  }
+
+  // Auto-capitalize input fields
+  function applyCapitalization(selector) {
+    let inputs = document.querySelectorAll(selector);
+    inputs.forEach(input => {
+      input.addEventListener("input", function() {
+        enforceCapitalization(this);
+      });
+
+      input.addEventListener("blur", function() {
+        enforceCapitalization(this);
+      });
+
+      // If pasting text, apply immediately
+      input.addEventListener("paste", function(event) {
+        setTimeout(() => enforceCapitalization(this), 50);
+      });
     });
-  });
+  }
+
+  applyCapitalization("#firstname, #lastname, #nearest_city");
 
   document.getElementById("custom_form").addEventListener("submit", function(event) {
     event.preventDefault();
