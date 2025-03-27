@@ -308,12 +308,24 @@
           } else {
             popup.classList.remove("error");
             popup.classList.add("success");
-            popup.textContent = "Thank you! Your submission was successful!";
+            popup.textContent = "Form submitted successfully!";
           }
           popup.style.display = "block";
+          setTimeout(function() {
+            popup.style.display = "none";
+          }, 3000); // Hide after 5 seconds
+
+          document.getElementById("custom_form").reset();
         })
         .catch(error => {
-          console.error('Error submitting form:', error);
+          console.error("Error submitting form:", error);
+          var popup = document.getElementById("popup");
+          popup.classList.add("error");
+          popup.textContent = "Submission failed. Try again.";
+          popup.style.display = "block";
+          setTimeout(function() {
+            popup.style.display = "none";
+          }, 3000); // Hide after 5 seconds
         });
       });
     });
