@@ -83,20 +83,26 @@
       color: black !important;
     }
     .popup {
-      position: fixed;
-      top: 10%;
+      position: relative; 
+      top: 0; 
+      margin-top: 15px; /* Space between button and popup */
       left: 50%;
       transform: translateX(-50%);
       background-color: #4CAF50;
       color: white;
-      padding: 15px;
-      font-size: 16px;
-      border-radius: 5px;
+      padding: 12px;
+      font-size: 11px;
+      border-radius: 100px;
       display: none;
       z-index: 1000;
+      width: 10%;
+      box-sizing: border-box;
     }
     .popup.error {
       background-color: #f44336;
+    }
+    .popup.success {
+      background-color: black;
     }
   </style>
 </head>
@@ -188,15 +194,16 @@
           if (data.status === 'error') {
             console.error("HubSpot error:", data.message);
             popup.classList.add("error");
-            popup.textContent = "There was an error submitting the form. Please try again later.";
+            popup.textContent = "Submission failed. Try again.";
           } else {
             popup.classList.remove("error");
+            popup.classList.add("success");
             popup.textContent = "Form submitted successfully!";
           }
           popup.style.display = "block";
           setTimeout(function() {
             popup.style.display = "none";
-          }, 3000); // Hide after 5 seconds
+          }, 3000); // Hide after 3 seconds
 
           document.getElementById("custom_form").reset();
         })
@@ -204,14 +211,14 @@
           console.error("Error submitting form:", error);
           var popup = document.getElementById("popup");
           popup.classList.add("error");
-          popup.textContent = "There was an error submitting the form. Please try again later.";
+          popup.textContent = "Submission failed. Try again.";
           popup.style.display = "block";
           setTimeout(function() {
             popup.style.display = "none";
-          }, 3000); // Hide after 5 seconds
+          }, 3000); // Hide after 3 seconds
         });
       });
     });
   </script>
-</body> 
+</body>
 </html>
