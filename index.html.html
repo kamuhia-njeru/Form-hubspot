@@ -36,9 +36,21 @@
   text-transform: none;
   outline: none; /* Removes the default focus outline */
 }
+/* Reduce space between labels and input fields */
+label {
+  margin-bottom: 2px; /* Decrease spacing */
+  display: block;
+}
+
+/* Reduce space between form elements */
+.form-container form {
+  gap: 8px; /* Adjust overall spacing */
+}
+
 /* Gray border around input fields */
 .form-container input {
   border: 2px solid gray !important;
+  padding: 12px; /* Keep padding for a clean look */
 }
 
 /* Red asterisk (*) */
