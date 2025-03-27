@@ -57,6 +57,30 @@ label {
 label span {
   color: red;
 }
+/* Light gray labels */
+label {
+  color: lightgray;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 2px; /* Reduce space between label and input */
+}
+
+/* Reduce space between form elements */
+.form-container form {
+  gap: 8px;
+}
+
+/* Gray border around input fields */
+.form-container input {
+  border: 2px solid gray !important;
+  padding: 12px;
+}
+
+/* Red asterisk (*) */
+label span {
+  color: red;
+}
+    
 .form-container input:focus {
   border-color: black; /* Keep border black when focused */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: Adds a slight glow effect */
