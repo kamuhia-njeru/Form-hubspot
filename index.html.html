@@ -82,7 +82,7 @@
     .pac-item {
       color: black !important;
     }
-    .popup {
+       .popup {
       position: relative; 
       top: 0; 
       margin-top: 2px; /* Space between button and popup */
@@ -104,15 +104,98 @@
     .popup.success {
       background-color: black;
     }
+	/* Ensure labels are bold and left-aligned */
+label {
+    font-weight: bold;
+    display: block; /* Ensures labels are on their own line */
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Style the description text */
+.description {
+    font-size: 0.9em; /* Slightly smaller font */
+    line-height: 1.5; /* Improve readability */
+    margin-top: 5px; /* Space between label and description */
+    margin-bottom: 10px; /* Space between description and input field */
+    color: #555; /* Slightly lighter text for better readability */
+    text-align: left; /* Ensures left alignment */
+}
+
+/* Ensure the form fields are properly spaced and aligned */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add spacing between form elements */
+}
+
+/* Optional: Add some padding to the form container */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+}
+
+/* Ensure labels are bold and left-aligned */
+label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+/* Style the description text */
+.description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: left;
+}
+
+/* Ensure the form fields are properly spaced and aligned */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Center the button */
+button {
+    align-self: center; /* Center the button horizontally */
+    padding: 10px 20px; /* Add padding to the button */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Increase font size for readability */
+    margin-top: 20px; /* Space between the form elements and button */
+}
+
+/* Optional: Add hover effect for the button */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
   </style>
 </head>
 <body>
   <div class="form-container">
     <form id="custom_form">
-      <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
-      <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <input type="text" id="nearest_city" name="nearest_city" placeholder="Nearest City" required autocomplete="off">
+      <label for="firstname"><strong><span>*</span> First name</strong></label>
+	   <input type="text" id="firstname" name="firstname" required>
+	   
+     <label for="lastname"><strong><span>*</span> Last name</strong></label>
+      <input type="text" id="lastname" name="lastname" required>
+	  
+	  <label for="email"><strong><span>*</span> Your email address</strong></label>
+	   <input type="email" id="email" name="email" required>
+	   
+	    <label for="nearest_city"><strong>Nearest city</strong></label>
+		 <p class="description" style="font-size: 0.9em;">
+    We would like to share content and exclusive events relevant to your location. Please enter your nearest city below
+</p>
+      <input type="text" id="nearest_city" name="nearest_city"  required autocomplete="off">
       <input type="hidden" id="guild_address_city" name="guild_address_city">
       <input type="hidden" id="guild_address_state" name="guild_address_state">
       <input type="hidden" id="guild_address_country" name="guild_address_country">
@@ -203,7 +286,7 @@
           popup.style.display = "block";
           setTimeout(function() {
             popup.style.display = "none";
-          }, 3000); // Hide after 5 seconds
+          }, 3000); // Hide after 3 seconds
 
           document.getElementById("custom_form").reset();
         })
@@ -215,7 +298,7 @@
           popup.style.display = "block";
           setTimeout(function() {
             popup.style.display = "none";
-          }, 3000); // Hide after 5 seconds
+          }, 3000); // Hide after 3 seconds
         });
       });
     });
