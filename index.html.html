@@ -8,7 +8,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6Ty5ZHqoSA2jlyqnyi1c7HqLp6G8Ij7I&libraries=places"></script>
   <style>
     body {
-      background-color: red;
+      background-color: transparent;
       font-family: Arial, sans-serif;
       margin: 0;
     }
@@ -26,7 +26,7 @@
     .form-container input {
       width: 100%;
       padding: 18px;
-      margin: 12px 0;
+      margin: 1px 0;
       border: none;
       font-size: 16px;
       font-weight: bold;
@@ -34,6 +34,10 @@
       box-sizing: border-box;
       border-radius: 0;
     }
+	.form-container input {
+  border: 1px solid lightgray !important;
+}
+
     .form-container input::placeholder {
       color: #999;
     }
@@ -110,10 +114,10 @@
 
     /* Style the description text */
     .description {
-        font-size: 0.9em; /* Slightly smaller font */
+        font-size: 0.8em; /* Slightly smaller font */
         line-height: 1.5; /* Improve readability */
-        margin-top: 5px; /* Space between label and description */
-        margin-bottom: 10px; /* Space between description and input field */
+        margin-top: 4px; /* Space between label and description */
+        margin-bottom: 4px; /* Space between description and input field */
         color: #555; /* Slightly lighter text for better readability */
         text-align: left; /* Ensures left alignment */
     }
@@ -141,19 +145,20 @@
 
     /* Style the description text */
     .description {
-        font-size: 0.9em;
+        font-size: 0.8em;
         line-height: 1.5;
         margin-top: 5px;
         margin-bottom: 10px;
         color: #555;
         text-align: left;
     }
+	
 
     /* Ensure the form fields are properly spaced and aligned */
     form {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 7px;
     }
 
     /* Center the button */
@@ -166,40 +171,52 @@
         border-radius: 5px; /* Slightly rounded corners */
         cursor: pointer; /* Pointer cursor on hover */
         font-size: 1em; /* Increase font size for readability */
-        margin-top: 20px; /* Space between the form elements and button */
+        margin-top: 18px; /* Space between the form elements and button */
     }
 
     /* Optional: Add hover effect for the button */
     button:hover {
         background-color: #0056b3; /* Darker blue on hover */
     }
+	  #custom_form label {
+        display: block;
+        margin-bottom: 3px; /* Reduced space below labels */
+    }
+    
+    #custom_form input {
+        margin-bottom: 8px; /* Reduced space between input fields */
+    }
+
+    #custom_form .description {
+        margin-bottom: 5px; /* Adjust spacing for the description */
+    }
   </style>
 </head>
 <body>
   <div class="form-container">
     <form id="custom_form">
-      <label for="firstname"><strong><span>*</span> First name</strong></label>
-      <input type="text" id="firstname" name="firstname" required>
+    <label for="firstname"><strong><span style="color: red;">*</span> First name</strong></label>
+    <input type="text" id="firstname" name="firstname" required>
 
-      <label for="lastname"><strong><span>*</span> Last name</strong></label>
-      <input type="text" id="lastname" name="lastname" required>
+    <label for="lastname"><strong><span style="color: red;">*</span> Last name</strong></label>
+    <input type="text" id="lastname" name="lastname" required>
 
-      <label for="email"><strong><span>*</span> Your email address</strong></label>
-      <input type="email" id="email" name="email" required>
+    <label for="email"><strong><span style="color: red;">*</span> Your email address</strong></label>
+    <input type="email" id="email" name="email" required>
 
-      <label for="nearest_city"><strong>Nearest city</strong></label>
-      <p class="description" style="font-size: 0.9em;">
-          We would like to share content and exclusive events relevant to your location. Please enter your nearest city below
-      </p>
-      <input type="text" id="nearest_city" name="nearest_city" required autocomplete="off">
+    <label for="nearest_city"><strong>Nearest city</strong></label>
+    <p class="description" style="font-size: 0.8em;">
+        We would like to share content and exclusive events relevant to your location. Please enter your nearest city below
+    </p>
+    <input type="text" id="nearest_city" name="nearest_city" required autocomplete="off">
 
-      <input type="hidden" id="guild_address_city" name="guild_address_city" style="text-transform: lowercase;">
-      <input type="hidden" id="guild_address_state" name="guild_address_state" style="text-transform: lowercase;">
-      <input type="hidden" id="guild_address_country" name="guild_address_country" style="text-transform: lowercase;">
-      <input type="hidden" id="ip_address" name="ip_address" style="text-transform: lowercase;">
+    <input type="hidden" id="guild_address_city" name="guild_address_city" style="text-transform: lowercase;">
+    <input type="hidden" id="guild_address_state" name="guild_address_state" style="text-transform: lowercase;">
+    <input type="hidden" id="guild_address_country" name="guild_address_country" style="text-transform: lowercase;">
+    <input type="hidden" id="ip_address" name="ip_address" style="text-transform: lowercase;">
 
-      <p class="form-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-      <button type="submit">Join</button>
+    <p class="form-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+    <button type="submit">Join</button>
     </form>
   </div>
   <div id="popup" class="popup"></div>
